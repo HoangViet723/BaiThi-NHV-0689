@@ -1,0 +1,41 @@
+@model IEnumerable<BaiThi_NHV.Models.NHV_Cau3>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NHVTenSV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHVSDT)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHVTenSV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHVSDT)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NHVMaSV">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NHVMaSV">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NHVMaSV">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

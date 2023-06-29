@@ -1,0 +1,30 @@
+@model BaiThi_NHV.Models.NHV_Cau3
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NHV_Cau3</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NHVTenSV)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NHVTenSV)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NHVSDT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NHVSDT)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NHVMaSV">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
